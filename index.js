@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT;
 
 app.use(cors());
 app.get('/api', (req, res) => {
@@ -21,5 +20,5 @@ app.post('/post', (req, res) => {
 	if (req.method == 'GET') res.end('metodo get');
 });
 
-app.listen(port);
+app.listen(3000);
 console.log('corriendo server');
